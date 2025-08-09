@@ -1,88 +1,152 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
+# 🛸 RickAndMockety – Kotlin Multiplatform App
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+A fully **Kotlin Multiplatform** project targeting **Android**, **iOS**, **Desktop**, and **Web**. Built using **Jetpack Compose Multiplatform**, **Clean Architecture**, **Koin for DI**, and modern Kotlin libraries.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-# Rick and Morty Kotlin App 🧪🚀
-
-A sample Android project built in Kotlin using **Clean Architecture**, **MVVM**, and modern Android development practices. It fetches data from the [Rick and Morty API](https://rickandmortyapi.com/) and displays characters, locations, and episodes.
+Fetches data from the [Rick and Morty API](https://rickandmortyapi.com/) and displays characters, locations, and episodes in a shared Compose UI across all platforms.
 
 ---
 
-## 🌐 Features
+## 📱 Supported Platforms
 
-- Fetch characters, locations, and episodes from the Rick and Morty API
-- View detailed information with responsive UI
-- Paginated list of characters
-- Clean Architecture separation of concerns
-- Offline caching support (optional, see future improvements)
-
----
-
-## 📱 Screenshots
-
-<img width="370" height="817" alt="image" src="https://github.com/user-attachments/assets/41d8035e-c5ee-4f98-b68e-36241256f539" />
-
-
+| Platform | Status |
+|----------|--------|
+| Android  | ✅     |
+| iOS      | ✅     |
+| Desktop  | ✅     |
+| Web      | ✅     |
 
 ---
 
-## 🧱 Tech Stack
+## 🌟 Features
 
-### Architecture
-- Clean Architecture (Data → Domain → Presentation)
-- MVVM (Model-View-ViewModel)
-- Repository Pattern
-- Dependency Injection with **Hilt**
-
-### Networking
-- **Ktor Client** – For making HTTP requests
-- **Kotlinx Serialization** – For parsing JSON responses
-
-### Image Loading
-- **Coil** – Image loading and caching
-
-### Async & Reactive
-- **Coroutines** – For asynchronous programming
-- **Flow** – For reactive data streams
-
-### UI & Design
-- Jetpack **Compose** (or traditional XML if not Compose-based)
-- Material Design components
-
-🧪 Testing
-Unit testing for Use Cases and ViewModels
-
-Mocked repositories for clean testing of domain logic
-
-🚧 Future Improvements
-Add offline caching using Room
-
-UI testing with Jetpack Compose Testing / Espresso
-
-Improved error handling and retry mechanism
-
-Dark mode support
-
-
+- ✅ Shared UI in Jetpack Compose (Multiplatform)
+- ✅ Koin for dependency injection across platforms
+- ✅ MVVM + Clean Architecture
+- ✅ Kotlinx Coroutines & Flow for async/reactive streams
+- ✅ Ktor Client for network requests
+- ✅ Character list & detail views (Rick and Morty API)
+- ✅ Modular, testable codebase
+- ✅ Compose previews & screenshot testing (Android/Desktop)
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-rick-and-morty/
-├── data/           # Remote & local data sources, DTOs, repositories
-├── domain/         # Entities and use cases
-├── presentation/   # UI components, ViewModels, Mappers
-├── di/             # Hilt modules for dependency injection
-└── utils/          # Common utilities and extensions
+rickandmockety/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── shared/                      # Shared KMP code (UI, domain, data)
+│   ├── src/commonMain/kotlin/
+│   │   ├── di/                  # Koin modules
+│   │   ├── ui/                 # Compose UI shared across platforms
+│   │   ├── data/               # Ktor API, DTOs, repository impls
+│   │   └── domain/             # Entities, use cases, interfaces
+│   └── build.gradle.kts
+├── androidApp/                 # Android app module
+│   ├── src/main/kotlin/
+│   └── build.gradle.kts
+├── iosApp/                     # iOS app via Kotlin CocoaPods
+├── desktopApp/                 # JVM Desktop app
+│   └── build.gradle.kts
+├── webApp/                     # Compose for Web app
+│   └── build.gradle.kts
 
+🔧 Tech Stack
+🎨 UI
+Jetpack Compose Multiplatform
+
+Material 3 Design
+
+Responsive layout (Desktop, Web, Mobile)
+
+🌍 Networking
+Ktor Client for HTTP requests
+
+Kotlinx Serialization for JSON parsing
+
+💉 Dependency Injection
+Koin – Multiplatform DI
+
+⚙️ Architecture
+Clean Architecture
+
+data/ - API + repository implementations
+
+domain/ - Use cases + interfaces
+
+ui/ - ViewModels + screens
+
+MVVM
+
+Repository Pattern
+
+🖼️ Image Loading
+Compose-compatible image loaders (Skiko, Coil)
+
+🧪 Testing
+Unit testing in commonTest
+
+Screenshot testing (Android/Desktop)
+
+Compose Preview support
+
+🚀 How to Run
+▶️ Android
+bash
+Copy
+Edit
+./gradlew :androidApp:installDebug
+Open in Android Studio and run on emulator or device.
+
+🍏 iOS
+Setup CocoaPods via shared/build.gradle.kts
+
+Open iosApp.xcworkspace in Xcode
+
+Build and run on a simulator or device
+
+🖥️ Desktop
+bash
+Copy
+Edit
+./gradlew :desktopApp:run
+Runs a native Compose desktop application.
+
+🌍 Web
+bash
+Copy
+Edit
+./gradlew :webApp:jsBrowserRun
+Open http://localhost:8080 to see it in the browser.
+
+🧪 Testing
+./gradlew :shared:allTests – Runs all shared tests
+
+./gradlew lint – Run Android lint checks
+
+Snapshot/screenshot testing available for Android/Desktop via Compose Testing
+
+📸 Screenshots
+![image](https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb)
+
+<img width="1179" height="2556" alt="simulator_screenshot_A65810A6-2601-4FC2-A809-FB84E09C2468" src="https://github.com/user-attachments/assets/1091d40f-438f-49db-ae34-32e1ef8cbb1a" />
+
+
+🛠 Future Improvements
+ Offline caching with SQLDelight / Room
+
+ Compose UI tests on iOS/Web
+
+ Improved API error handling
+
+ Dark Mode support
+
+ Localization & accessibility
+
+📜 License
+MIT License © 2025 [Your Name]
+
+🤝 Contributing
+Contributions are welcome! If you want to help add new features, improve performance, or make this a better multiplatform sample — open a PR or issue.
 
