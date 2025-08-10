@@ -2,7 +2,7 @@ name: Ktlint Check
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master
 
 jobs:
   ktlint:
