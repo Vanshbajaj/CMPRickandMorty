@@ -51,93 +51,85 @@ rickandmockety/
 │   └── build.gradle.kts
 ├── webApp/                     # Compose for Web app
 │   └── build.gradle.kts
+```
 
-🔧 Tech Stack
-🎨 UI
-Jetpack Compose Multiplatform
+## 🔧 Tech Stack
+### 🎨 UI
+- Jetpack Compose Multiplatform
+- Material 3 Design
+- Responsive layout (Desktop, Web, Mobile)
 
-Material 3 Design
+### 🌍 Networking
+- Ktor Client for HTTP requests
+- Kotlinx Serialization for JSON parsing
 
-Responsive layout (Desktop, Web, Mobile)
+### 💉 Dependency Injection
+- Koin – Multiplatform DI
 
-🌍 Networking
-Ktor Client for HTTP requests
+### ⚙️ Architecture
+#### Clean Architecture
+- data/ - API + repository implementations
+- domain/ - Use cases + interfaces
+- ui/ - ViewModels + screens
 
-Kotlinx Serialization for JSON parsing
-
-💉 Dependency Injection
-Koin – Multiplatform DI
-
-⚙️ Architecture
-Clean Architecture
-
-data/ - API + repository implementations
-
-domain/ - Use cases + interfaces
-
-ui/ - ViewModels + screens
-
-MVVM
-
+#### MVVM
 Repository Pattern
 
-🖼️ Image Loading
+### 🖼️ Image Loading
 Compose-compatible image loaders (Skiko, Coil)
 
-🧪 Testing
+### 🧪 Testing
 Unit testing in commonTest
-
 Screenshot testing (Android/Desktop)
 
-Compose Preview support
+### Compose Preview support
 
-🚀 How to Run
-▶️ Android
-bash
-Copy
-Edit
+## 🚀 How to Run
+### ▶️ Android
+```bash
 ./gradlew :androidApp:installDebug
 Open in Android Studio and run on emulator or device.
+```
 
-🍏 iOS
+### 🍏 iOS
 Setup CocoaPods via shared/build.gradle.kts
-
 Open iosApp.xcworkspace in Xcode
-
 Build and run on a simulator or device
 
-🖥️ Desktop
-bash
-Copy
-Edit
+### 🖥️ Desktop
+```bash
 ./gradlew :desktopApp:run
+```
 Runs a native Compose desktop application.
 
-🌍 Web
-bash
-Copy
-Edit
+### 🌍 Web
+```bash
 ./gradlew :webApp:jsBrowserRun
+```
 Open http://localhost:8080 to see it in the browser.
 
-🧪 Testing
+### 🧪 Testing
+```bash
 ./gradlew :shared:allTests – Runs all shared tests
-
 ./gradlew lint – Run Android lint checks
-
+```
 Snapshot/screenshot testing available for Android/Desktop via Compose Testing
 
-🛠 Future Improvements
- Offline caching with SQLDelight / Room
+### 📸 Screenshots
+<img width="380" alt="simulator_screenshot_7c64dff8-9478-452c-9c66-146314d51eeb" src="https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb" />
+<img width="380" alt="simulator_screenshot_A65810A6-2601-4FC2-A809-FB84E09C2468" src="https://github.com/user-attachments/assets/1091d40f-438f-49db-ae34-32e1ef8cbb1a" />
 
- Compose UI tests on iOS/Web
 
- Improved API error handling
+### 🛠 Future Improvements
+ - Offline caching with SQLDelight / Room
+ - Compose UI tests on iOS/Web
+ - Improved API error handling
+ - Dark Mode support
+ - Localization & accessibility
 
- Dark Mode support
+### 📜 License
+MIT License © 2025 Vansh Bajaj
 
- Localization & accessibility
-
-🤝 Contributing
+### 🤝 Contributing
 Contributions are welcome! If you want to help add new features, improve performance, or make this a better multiplatform sample — open a PR or issue.
 
