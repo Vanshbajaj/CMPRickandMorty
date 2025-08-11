@@ -117,7 +117,7 @@ Snapshot/screenshot testing available for Android/Desktop via Compose Testing
 
 ### 📸 Screenshots
 <img width="380" alt="simulator_screenshot_7c64dff8-9478-452c-9c66-146314d51eeb" src="https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb" />
-<img width="380" alt="simulator_screenshot_A65810A6-2601-4FC2-A809-FB84E09C2468" src="https://github.com/user-attachments/assets/1091d40f-438f-49db-ae34-32e1ef8cbb1a" />
+
 
 
 ### 🛠 Future Improvements
