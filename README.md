@@ -115,8 +115,6 @@ Open http://localhost:8080 to see it in the browser.
 ```
 Snapshot/screenshot testing available for Android/Desktop via Compose Testing
 
-### 📸 Screenshots
-<img width="380" alt="simulator_screenshot_7c64dff8-9478-452c-9c66-146314d51eeb" src="https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb" />
 
 
 ### 🛠 Future Improvements
