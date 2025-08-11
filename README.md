@@ -119,7 +119,6 @@ Snapshot/screenshot testing available for Android/Desktop via Compose Testing
 <img width="380" alt="simulator_screenshot_7c64dff8-9478-452c-9c66-146314d51eeb" src="https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb" />
 
 
-
 ### 🛠 Future Improvements
  - Offline caching with SQLDelight / Room
  - Compose UI tests on iOS/Web
