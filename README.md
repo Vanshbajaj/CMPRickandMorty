@@ -127,12 +127,6 @@ Open http://localhost:8080 to see it in the browser.
 
 Snapshot/screenshot testing available for Android/Desktop via Compose Testing
 
-📸 Screenshots
-![image](https://github.com/user-attachments/assets/7c64dff8-9478-452c-9c66-146314d51eeb)
-
-<img width="1179" height="2556" alt="simulator_screenshot_A65810A6-2601-4FC2-A809-FB84E09C2468" src="https://github.com/user-attachments/assets/1091d40f-438f-49db-ae34-32e1ef8cbb1a" />
-
-
 🛠 Future Improvements
  Offline caching with SQLDelight / Room
 
@@ -143,9 +137,6 @@ Snapshot/screenshot testing available for Android/Desktop via Compose Testing
  Dark Mode support
 
  Localization & accessibility
-
-📜 License
-MIT License © 2025 [Your Name]
 
 🤝 Contributing
 Contributions are welcome! If you want to help add new features, improve performance, or make this a better multiplatform sample — open a PR or issue.
